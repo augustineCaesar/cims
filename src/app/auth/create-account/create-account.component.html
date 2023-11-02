@@ -1,0 +1,20 @@
+
+
+<div class="container"> 
+    
+    <div class="card">
+        <h2>Create Account</h2>
+        <form [formGroup]="credentials" (ngSubmit)="register()">
+        <span class="loader" *ngIf="showLoading"></span>
+        {{loadingMessage}}
+         <input type="email" placeholder="Email" label="email" formControlName="email">
+         <mat-hint *ngIf="(email.dirty || email.touched) &&  email.errors ">Email Invalid</mat-hint>
+         <input type="password" placeholder="Password" aria-label="password" formControlName="password">
+          <mat-hint *ngIf="(password.dirty || password.touched) &&  password.errors ">Password should be long, have special character(s) and number(s) <br> i.e Bobby#146</mat-hint>
+            <div class="buttons">
+                <button mat-button type="submit" class="register-button" [disabled]="!credentials.valid">Register</button>    
+            </div>
+            <i routerLink="/login" class="link" >Already have account?</i>
+        </form>
+    </div>
+</div>

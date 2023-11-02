@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cimsstmartin": {
+      "hosting": {
+        "cims": [
+          "cimsstmartin"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cimsstmartin"
+  }
+}

@@ -1,0 +1,149 @@
+
+<div class="container">
+    
+    <form class="baptism-form" [formGroup]="bapdetails" (ngSubmit)="submit()" >
+        <h2>Enter Person's Information</h2>
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Parents' Names</mat-label>
+            <input  matInput type="text" formControlName="Parentsname"  placeholder="James Mwangi, Mary Achieng">
+            <mat-error *ngIf="(Parentsname.dirty || Parentsname.touched) &&  Parentsname.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Parents' Address </mat-label>
+            <input  matInput type="text" formControlName="Parentsaddr"  placeholder="Kianjai, Meru">
+            <mat-error *ngIf="(Parentsaddr.dirty || Parentsaddr.touched) &&  Parentsaddr.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label> Name of GodParent</mat-label>
+            <input  matInput type="text" formControlName="Godparent"  placeholder="James Mwangi">
+            <mat-error *ngIf="(Godparent.dirty || Godparent.touched) &&  Godparent.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Baptism Number</mat-label>
+            <input  matInput type="text" formControlName="Bnumber"  placeholder="45678">
+            <mat-error *ngIf="(Bnumber.dirty || Bnumber.touched) &&  Bnumber.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Baptism Name and Family Name</mat-label>
+          <input  matInput type="text" formControlName="Bname"  placeholder="Ken Mwangi">
+          <mat-error *ngIf="(Bname.dirty || Bname.touched) &&  Bname.errors " class="error">
+            Field Invalid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input  matInput type="date" formControlName="DOB" >
+            <mat-error *ngIf="(DOB.dirty || DOB.touched) &&  DOB.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label> Date of Baptism </mat-label>
+            <input  matInput type="date" formControlName="Bdate" >
+            <mat-error *ngIf="(Bdate.dirty || Bdate.touched) &&  Bdate.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Place of Baptism</mat-label>
+            <input  matInput type="text" formControlName="Bplace"  placeholder="Karuri">
+            <mat-error *ngIf="(Bplace.dirty || Bplace.touched) &&  Bplace.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Name of Minister</mat-label>
+            <input  matInput type="text" formControlName="Bminister"  placeholder="Rev. Kung'u">
+            <mat-error *ngIf="(Bminister.dirty || Bminister.touched) &&  Bminister.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Date of First Communion</mat-label>
+            <input  matInput type="date" formControlName="Firstcommdate"  placeholder="">
+            <mat-error *ngIf="(Firstcommdate.dirty || Firstcommdate.touched) &&  Firstcommdate.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Place of First Communion</mat-label>
+          <input  matInput type="text" formControlName="Firstcommplace"  placeholder="">
+          <mat-error *ngIf="(Firstcommplace.dirty || Firstcommplace.touched) &&  Firstcommplace.errors " class="error">
+            Field Invalid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Date of Confirmation</mat-label>
+            <input  matInput type="date" formControlName="Confdate"  placeholder="">
+            <mat-error *ngIf="(Confdate.dirty || Confdate.touched) &&  Confdate.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Place of Confirmation</mat-label>
+            <input  matInput type="text" formControlName="Confplace"  placeholder="">
+            <mat-error *ngIf="(Confplace.dirty || Confplace.touched) &&  Confplace.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Name of Spouse</mat-label>
+            <input  matInput type="text" formControlName="Spousename"  placeholder="">
+            <mat-error *ngIf="(Spousename.dirty || Spousename.touched) &&  Spousename.errors " class="error">
+              Field Invalid
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Place of Marriage</mat-label>
+          <input  matInput type="text" formControlName="Spouseplace"  placeholder="">
+          <mat-error *ngIf="(Spouseplace.dirty || Spouseplace.touched) &&  Spousename.errors " class="error">
+            Field Invalid
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Date of Death</mat-label>
+          <input  matInput type="text" formControlName="Death"  placeholder="">
+          <mat-error *ngIf="(Death.dirty || Death.touched) &&  Death.errors " class="error">
+            Field Invalid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Observations</mat-label>
+          <textarea  matInput type="text" formControlName="Observations"  placeholder=""></textarea>
+          <mat-error *ngIf="(Observations.dirty || Observations.touched) &&  Observations.errors " class="error">
+            Field Invalid
+          </mat-error>
+        </mat-form-field>
+        <span class="loader" *ngIf="showLoading"></span>
+        {{loadingMessage}}
+        <br>
+        <button mat-raised-button  type="submit" class="submitBtn" [disabled]="!bapdetails.valid">Submit</button>
+    </form>
+</div>
+
+

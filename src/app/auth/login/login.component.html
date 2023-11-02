@@ -1,0 +1,22 @@
+
+
+
+
+<div class="container">
+    <div class="card">
+        <h2>Log In</h2>
+        <form [formGroup]="credentials" (ngSubmit)="login()">
+        <span class="loader" *ngIf="showLoading"></span>
+        {{loadingMessage}}
+         <input type="email" placeholder="Email" label="email" formControlName="email">
+         <mat-hint *ngIf="(email.dirty || email.touched) &&  email.errors ">Email Invalid</mat-hint>
+         <input type="password" placeholder="Password" aria-label="password" formControlName="password">
+          <mat-hint *ngIf="(password.dirty || password.touched) &&  password.errors ">Password Invalid</mat-hint>
+            <div class="buttons">
+                <button mat-button type="submit" class="login-button" [disabled]="!credentials.valid">Login</button>    
+            </div>
+            <i routerLink="/create-account" class="link" >Don't have account?</i>
+            <i routerLink="/forgot-password" class="link" >Forgot Password?</i>
+        </form>
+    </div>
+</div>
